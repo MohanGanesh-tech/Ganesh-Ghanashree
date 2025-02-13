@@ -1,0 +1,227 @@
+/* Google Fonts */
+@font-face {
+    font-family: 'Allura';
+    src: url('fonts/Allura-Regular.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+}
+
+.hero {
+    background: url('assets/ImportedPhoto.761054462.849991.jpeg') center/cover no-repeat;
+    padding: 50px 20px;
+    height: 700px;
+}
+
+.couplename {
+    font-family: 'Allura', cursive;
+    font-size: 70px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 0.8;
+}
+
+.bluecolor {
+    color: #3674B5;
+}
+
+.whitecolor {
+    color: #f7f7f8;
+}
+
+.redcolor {
+    color: #ff0000;
+}
+
+.heartcolor {
+    background: linear-gradient(to left, #f68e64, #f45719, #ff4800);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.three-d-text {
+    color: rgb(234, 15, 15);
+    text-shadow: 3px 3px 0px #efeeed, 
+                 6px 6px 0px #555, 
+                 9px 9px 0px #888;
+  }
+  
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.coupleimage {
+    width: 100px;
+    height: 60px;
+}
+
+.tagline {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.video-preview {
+    position: fixed;
+    right: 20px;
+    top: 600px;
+    transform: translateY(-50%);
+    width: 320px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.microphone-icon{
+    width: 80px;
+    height: auto;
+}
+
+.video-preview video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+ /* Button styling */
+ .popup-btn {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    outline: none; /* Removes focus outline */
+}
+
+.popup-btn:focus {
+    outline: none; /* Ensures no focus border */
+}
+
+.popup-text {
+    margin-left: 10px;
+    color: #b5e3ea;
+    font-weight: 500;
+}
+
+/* Popup container */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 80px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 1000;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+/* Overlay */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.aip {
+    display: block;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+@keyframes shine {
+    100% { text-shadow: 0 0 5px #fdd985; }
+    50% { text-shadow: 0 0 10px #e9da81, 0 0 15px #fffa; }
+    0% { text-shadow: 0 0 5px #fff; }
+}
+
+.shining-text {
+    animation: shine 5s infinite alternate ease-in-out;
+}
+
+/* Countdown Timer */
+.timer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.time-box {
+    background: #ffffff;
+    padding: 10px;
+    padding-top: 20px;
+    border-radius: 5px;
+    width: 80px;
+    box-shadow: 3px 2px 5px 5px rgb(194, 224, 253);
+    text-align: center;
+    font-family: Comfortaa;
+    color: #3674B5;
+}
+
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+    }
+    
+    .hero {
+        background: url('assets/ImportedPhoto.761054462.849991.jpeg') center/cover no-repeat;
+        background-position-x: -130px;
+        padding: 50px 20px;
+        height: 700px;
+    }
+    
+    .couplename {
+        font-size: 30px;
+    }
+    
+    .tagline {
+        font-size: 22px;
+    }
+
+    .aititle{
+        font-size: 20px;
+    }
+
+    .aitext1{
+        margin-top: 20px;
+        font-size: 16px;
+    }
+
+    .aitext2{
+        font-size: 14px;
+    }
+    
+    .video-preview {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        width: 90%;
+        height: auto;
+        margin: 20px auto;
+    }
+}
